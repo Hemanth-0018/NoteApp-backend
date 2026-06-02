@@ -2,7 +2,6 @@ import express,{Request,Response} from "express"
 import dotenv from "dotenv"
 import cors from "cors"
 import connectDB from "./config/db"
-import Note from "./models/Note"
 import noteRoutes from "./routes/noteRoutes"
 import authRoutes from "./routes/authRoutes"
 dotenv.config()
@@ -13,7 +12,7 @@ connectDB()
 app.use(cors({
     origin:[
         "http://localhost:5173",
-        "https://note-app-frontend-lm9bv4zdz-hemanth-eswar-s-projects.vercel.app"
+        "https://note-app-frontend-je2uoxqy8-hemanth-eswar-s-projects.vercel.app"
     ],credentials:true
 }))
 app.use(express.json())
