@@ -10,7 +10,12 @@ const app=express()
 
 connectDB()
 
-app.use(cors())
+app.use(cors({
+    origin:[
+        "http://localhost:5173",
+        "https://note-app-frontend-lm9bv4zdz-hemanth-eswar-s-projects.vercel.app"
+    ],credentials:true
+}))
 app.use(express.json())
 
 app.get("/",async(req:Request,res:Response)=>{
